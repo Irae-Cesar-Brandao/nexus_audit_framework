@@ -336,8 +336,27 @@ function mostrarSecao(secao){
   document.getElementById(secao).style.display = 'block';
 };
 
-mostrarSecao('home');
+/*==========================================
+ TRAVAR A CÓPIA CONTEÚDO COM REF. AUTOR 
+      bY: IRAÊ CÉSAR BRANDÃO - 05-2026
+ ==========================================*/
 
+//---------- BLOQUEAR CLIQUE DIREITO ----------
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Bloqueia o menu do botão direito
+    alert("Copiar conteúdo não é permitido sem referência ao autor '© 2026 Iraê César Brandão - https://luckway.com.br' .");
+});
+
+// ---------- BLOQUEAR CTRL+C E CTRL+X ----------
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'x')) {
+        e.preventDefault(); // Bloqueia copiar e recortar
+        alert("Copiar/Recortar desativado. Cite o autor! '© 2026 Iraê César Brandão - https://luckway.com.br'");
+    }
+});
+
+
+mostrarSecao('home');
 
 window.addEventListener("beforeunload",e=>{e.preventDefault();e.returnValue="Faça backup antes de sair!"});
 listar();
