@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+          <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Auditoria  Tecnológica PRO</title>
+    	<meta name="description" content="Sistema Nexus-AF versão 1.1.10 (Modelo Estruturado de Auditoria Informacional Completa PRO.">	
+    	<meta name="author" content="Iraê César Brandão - Desenvolvedor Luck Way Informática.">
+    	<meta name="keywords" content="auditoria ti, nexus audit, sistema de auditoria. ">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+                      <link rel="stylesheet" href="style.css">
+
+<!-- ESTILIZAÇÃO CSS -->
+
+
+
+</head>
+
+<!-- FRONT-END - BROWSER -->
+<body>
+
+
+
+<header class="header">
+  <img src="logo_nexus.jpg" class="logo">
+
+  <div class="header-text">
+    <div class="title-row">
+      <h1 style="border: 2px solid white; display: inline-block; padding: 5px;">Nexus Audit Framework</h1>
+    </div>
+    <h5>Sistema Nexus-AF versão 1.1.10 (Modelo Estruturado de Auditoria Informacional Completa PRO)</h5>
+    <h6><i>Desenvolvedor: Iraê César Brandão - Atualizado em: 12 abril 2026.</i></h6>
+  </div>
+</header>
+
+
+<div class="container">
+
+<!-- TUTORIAL COMPLETO -->
+<div class="section">
+
+<button class="btn-primary" onclick="toggleTutorial()">📘 Mostrar / Ocultar Tutorial</button>
+
+<div id="tutorial" style="display:none; margin-top:15px;">
+
+<h3>📘 Tutorial de Uso do Sistema de Auditoria</h3>
+
+<h4>Fluxo Geral</h4>
+<table>
+<tr><th>Etapa</th><th>Ação</th><th>Resultado</th></tr>
+<tr><td>1</td><td>Preencher dados da empresa</td><td>Identificação da auditoria</td></tr>
+<tr><td>2</td><td>Informar dados da auditoria</td><td>Contextualização</td></tr>
+<tr><td>3</td><td>Avaliar os blocos</td><td>Geração de notas</td></tr>
+<tr><td>4</td><td>Inserir evidências</td><td>Comprovação</td></tr>
+<tr><td>5</td><td>Salvar</td><td>Registro no sistema</td></tr>
+<tr><td>6</td><td>Gerar dashboard</td><td>Análise visual</td></tr>
+<tr><td>7</td><td>Exportar PDF/XLS</td><td>Relatório formal</td></tr>
+<tr><td>8</td><td>PDF múltiplo</td><td>Comparação de auditorias</td></tr>
+</table>
+
+<h4>Cadastro da Empresa</h4>
+<table>
+<tr><th>Campo</th><th>Descrição</th></tr>
+<tr><td>Nome</td><td>Identificação da organização</td></tr>
+<tr><td>E-mail</td><td>Contato institucional</td></tr>
+<tr><td>Telefone</td><td>Comunicação</td></tr>
+<tr><td>Endereço</td><td>Localização</td></tr>
+<tr><td>Responsável</td><td>Pessoa de referência</td></tr>
+</table>
+
+<h4>Avaliação</h4>
+<table>
+<tr><th>Elemento</th><th>Função</th></tr>
+<tr><td>Descrição</td><td>Detalhar o que foi analisado</td></tr>
+<tr><td>Nota (1–10)</td><td>Mensuração</td></tr>
+<tr><td>Imagem</td><td>Evidência documental</td></tr>
+</table>
+
+<h4>Salvamento</h4>
+<table>
+<tr><th>Ação</th><th>Resultado</th></tr>
+<tr><td>Salvar</td><td>Armazena no navegador</td></tr>
+<tr><td>Backup</td><td>Arquivo de segurança (.json)</td></tr>
+<tr><td>Importar</td><td>Restauração dos dados</td></tr>
+</table>
+
+<h4>Dashboard</h4>
+<table>
+<tr><th>Elemento</th><th>Função</th></tr>
+<tr><td>Gráfico</td><td>Visualização das notas</td></tr>
+<tr><td>Média</td><td>Indicador geral</td></tr>
+<tr><td>Parecer</td><td>Análise automática</td></tr>
+</table>
+
+<h4>Ranking de Risco</h4>
+<table>
+<tr><th>Faixa</th><th>Classificação</th></tr>
+<tr><td>1–3</td><td>Alto risco</td></tr>
+<tr><td>4–6</td><td>Médio risco</td></tr>
+<tr><td>7–8</td><td>Baixo risco</td></tr>
+<tr><td>9–10</td><td>Muito baixo risco</td></tr>
+</table>
+
+<h4>Diretrizes e Normas</h4>
+<p>
+Baseado em diretrizes da 
+:contentReference[oaicite:0]{index=0}, 
+ISO/IEC 27001 e 27002 (Segurança da Informação), 
+:contentReference[oaicite:1]{index=1} 
+e :contentReference[oaicite:2]{index=2}.
+</p>
+
+<h4>Observação Acadêmica</h4>
+<p>
+Este sistema foi desenvolvido em caráter experimental e acadêmico, sem finalidade lucrativa. 
+Seu uso destina-se exclusivamente a fins educacionais e de pesquisa.
+</p>
+
+<p>
+Caso utilizado em outros trabalhos, é obrigatória a citação do autor e das referências conforme normas da 
+:contentReference[oaicite:3]{index=3}.
+</p>
+
+<p>
+O autor não se responsabiliza pelo uso indevido ou fora do escopo acadêmico.
+</p>
+
+</div>
+</div>
+<!-- FECHAMENTO DO TUTORIAL->
+
+
+<!-- INICIO DO FRAMEWORK DE AUDITORIA -->
+<!-- NOVO BOTÃO -->
+<div class="section">
+<button onclick="novo()">🆕 Nova Análise</button>
+</div>
+
+
+<div class="section">
+<h3>Dados da Empresa</h3>
+<input id="empresa" placeholder="Nome da Empresa">
+<input id="email" placeholder="E-mail">
+<input id="telefone" placeholder="Telefone">
+<input id="endereco" placeholder="Endereço (Rua, número, bairro e complemento)">
+<input id="cidade" placeholder="Cidade">
+<input id="estado" placeholder="Estado">
+<input id="cep" placeholder="CEP">
+<input id="responsavel" placeholder="Nome do Responsável da empresa auditada">
+</div>
+
+<div class="section">
+<h3>Dados da Auditoria</h3>
+<input id="setor" placeholder="Setor auditado">
+<input id="data" type="date">
+<input id="revisao" placeholder="Revisão (ex: 1,2...)">
+<textarea id="correcoes" placeholder="Correções realizadas"></textarea>
+</div>
+
+<div class="section">
+<h3>Auditor</h3>
+<input id="auditor" placeholder="Nome do auditor">
+<input id="cargo" placeholder="Cargo do Auditor">
+</div>
+
+
+
+
+<!-- SCRIPTS JS --> 
+<script>
+const campos=["planejamento","analise","recursos","critica","relatorio","recomendacoes"];
+function blocoHTML(id){return `
+<div class='section'>
+<h3>${id.toUpperCase()}</h3>
+<textarea id='desc_${id}' placeholder='Descreva o que foi avaliado...'></textarea>
+<input id='nota_${id}' type='number' min='1' max='10' placeholder='Nota 1 a 10'>
+<input type='file' accept='image/*' onchange='imgLoad(event,"img_${id}")'>
+<img id='img_${id}'>
+</div>`}
+</script>
+<div id="blocos"></div>
+
+
+<div class="section">
+<h3>Templates</h3>
+<select id="lista"></select>
+<button onclick="carregar()">Carregar</button>
+<button class="danger" onclick="excluir()">Excluir</button>
+</div>
+
+<div class="section">
+<button onclick="salvar()">💾 Salvar</button>
+<button onclick="backup()">📦 Backup</button>
+<button onclick="gerarPDF()">PDF</button>
+<button onclick="gerarXLS()">XLS</button>
+<button onclick="exportarDashboard()">📊 Dashboard</button>
+<button onclick="gerarRanking()">🏆 Ranking</button>
+<button onclick="gerarPDFMultiplo()">📑 PDF Múltiplo</button>
+<button class="danger" onclick="limpar()">Excluir Tudo</button>
+<input type="file" onchange="importar(event)">
+</div>
+
+<h3>Relatórios Salvos</h3>
+<table>
+<thead><tr><th></th><th>Nome</th><th>Ação</th></tr></thead>
+<tbody id="listaRelatorios"></tbody>
+</table>
+
+<div class="section">
+<canvas id="grafico"></canvas>
+<p id="analise"></p>
+<p id="parecer"></p>
+</div>
+
+<div id="rankingContainer" class="section"></div>
+
+</div>
+
+
+
+<!-- SCRIPT JS -->
+ <script src="script.js"></script>
+
+</body>
+
+ <footer>
+       <p  style="text-align:center; font-size: 12px;"> © 2026 — Iraê César Brandão (Dev)  (Page for academic purposes.) — <a href="license.html" style="color: blue;">Licença Acadêmica (AREUL)</a></p>
+  </footer>
+
+</html>

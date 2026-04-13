@@ -1,0 +1,115 @@
+
+body{
+  font-family:Arial;
+  background:#D1D7D3;
+  margin:0;
+}
+
+header{
+  background:#387087;
+  color:#fff;
+  padding:15px;
+  text-align:center;
+  font-size:20px;
+}
+
+.container{
+  padding:15px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section{
+  background:#fff;
+  padding:15px;
+  margin-top:15px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+input,select,textarea{
+  margin:5px 0;
+  padding:8px;
+  width:100%;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+button{
+  padding:10px 14px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.2s;
+}
+
+button:hover{
+  opacity:0.85;
+}
+
+/* TIPOS DE BOTÃO */
+.btn-primary{background:#61ACB7;color:#fff;}
+.btn-secondary{background:#847855;color:#fff;}
+.btn-success{background:#387087;color:#fff;}
+.btn-danger{background:#c0392b;color:#fff;}
+
+/* GRID DE BOTÕES */
+.button-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+
+/* TABELA */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th{
+  background:#61ACB7;
+  color:#fff;
+}
+
+th,td{
+  border:1px solid #847855;
+  padding:8px;
+}
+
+img{
+  max-width:100px;
+  margin-top:5px;
+}
+
+/* BARRA DE MENUS */
+
+.menu-bar{
+  display:flex;
+  gap:10px;
+  background:#387087;
+  padding:10px;
+  justify-content:center;
+}
+
+.menu-bar button{
+  background:#61ACB7;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.menu-bar button:hover{
+  background:#847855;
+}
+
+
+.logo {
+  width: 100px; /* ajusta tamanho conforme necessário */
+  height: auto;
+  filter: drop-shadow(8px 8px 8px rgba(0,255,255,0.4));
+}
