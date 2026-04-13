@@ -181,13 +181,37 @@ exploração comercial não autorizada.
       </pre>
     </div>
 
-  </div>
+</div>
 
   <footer>
     <hr>
     AREUL — Academic Research and Educational Use License<br>
     © 2026 — Iraê César Brandão
   </footer>
+
+  <script>
+
+/*==========================================
+ TRAVAR A CÓPIA CONTEÚDO COM REF. AUTOR 
+      bY: IRAÊ CÉSAR BRANDÃO - 05-2026
+ ==========================================*/
+
+
+//---------- BLOQUEAR CLIQUE DIREITO ----------
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Bloqueia o menu do botão direito
+    alert("Copiar conteúdo não é permitido sem referência ao autor '© 2026 Iraê César Brandão - https://luckway.com.br' .");
+});
+
+// ---------- BLOQUEAR CTRL+C E CTRL+X ----------
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'x')) {
+        e.preventDefault(); // Bloqueia copiar e recortar
+        alert("Copiar/Recortar desativado. Cite o autor! '© 2026 Iraê César Brandão - https://luckway.com.br'");
+    }
+});
+    
+  </script>
 
 </body>
 </html>
